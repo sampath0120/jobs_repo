@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pune jbs information</title>
+    <link rel="stylesheet" href="{% static 'css/hj1.css' %}">
+  </head>
+  <body>
+    <h1>Pune Jobs information</h1>
+    {% if pj %}
+    <table border="3">
+      <thead>
+        <th>interview</th>
+        <th>company</th>
+        <th>tittle</th>
+        <th>qualification</th>
+        <th>address</th>
+        <th>email</th>
+        <th>phone</th>
+      </thead>
+      {% for i in pj %}
+      <tr>
+        <td>{{i.interviewdate}}</td>
+        <td>{{i.companyname}}</td>
+        <td>{{i.tittle}}</td>
+        <td>{{i.qualification}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.phno}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+   {% else %}
+   <p id='specialp'>there is no jobs found !!!!!!</p>
+   {% endif %}
+     </body>
+</html>

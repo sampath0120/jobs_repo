@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BANGULOR JOBD INFO</title>
+  </head>
+  <body>
+    <h1>bangulor jobs information</h1>
+    {% if bngj %}
+    {% for h in bngj %}
+    <ul>
+      <li>job tittle : {{h.tittle}}</li>
+      <li>job interview date : {{h.interviewdate}}</li>
+      <li>company name :{{h.companyname}}</li>
+      <li>qualification : {{h.qualification}}</li>
+      <li>company email :{{h.email}}</li>
+      <li>contact : {{h.phno}}</li>
+      <hr>
+    </ul>
+    {% endfor %}
+    {% else %}
+    <p>There is no jobs to attend the interviews!!!!</p>
+    {% endif %}
+  </body>
+</html>
+{{h.tittle}}
